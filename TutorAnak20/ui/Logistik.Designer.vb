@@ -156,6 +156,7 @@ Partial Class Logistik
         Me.ListView1.Size = New System.Drawing.Size(719, 151)
         Me.ListView1.TabIndex = 12
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '

@@ -12,6 +12,8 @@
         For Each entry In Repository.dataJadi
             ListView1.Items.Add(New ListViewItem(New String() {entry.name, entry.qty}))
         Next
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

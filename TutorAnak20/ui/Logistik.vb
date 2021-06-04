@@ -28,7 +28,9 @@
         repository.saveBarangJadi(latteDrink)
         ListView1.Items.Clear()
         For Each entry In Repository.dataLogistik
-
+            ListView1.Items.Add(New ListViewItem(New String() {entry.nama, entry.kota, entry.ongkir}))
         Next
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
     End Sub
 End Class
