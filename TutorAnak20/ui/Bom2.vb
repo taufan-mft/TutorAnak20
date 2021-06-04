@@ -32,4 +32,13 @@
             Label4.Text = jumlah * Constanta.kopiLatter
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim bahan As New BahanBakuModel(CInt(Label3.Text), CInt(Label4.Text))
+        repository.saveRequiredBahan(bahan)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        GudangBahanBaku.Show()
+    End Sub
 End Class
