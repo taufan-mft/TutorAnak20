@@ -9,6 +9,6 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Bom2.Show()
+        Bom2.Show() 'buk
     End Sub
 End Class
