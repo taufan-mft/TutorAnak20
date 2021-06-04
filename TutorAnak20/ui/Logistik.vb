@@ -26,5 +26,9 @@
         Dim latteDrink As New BarangJadiModel("Latte", -CInt(Label7.Text))
         repository.saveBarangJadi(americanoDrink)
         repository.saveBarangJadi(latteDrink)
+        ListView1.Items.Clear()
+        For Each entry In Repository.dataLogistik
+
+        Next
     End Sub
 End Class
