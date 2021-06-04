@@ -2,12 +2,12 @@
     Dim repository As New Repository
     Private Sub comboChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
         If ComboBox1.SelectedItem.ToString() = "Americano" Then
-            Dim jumlah As Int16 = repository.getProductCount(Constanta.americano)
+            Dim jumlah As Int16 = repository.getProductCount(americano)
             TextBox1.Text = jumlah.ToString
             populateField(jumlah, Constanta.americano)
         End If
         If ComboBox1.SelectedItem.ToString() = "Latte" Then
-            Dim jumlah As Int16 = repository.getProductCount(Constanta.latte)
+            Dim jumlah As Int16 = repository.getProductCount(latte)
             TextBox1.Text = jumlah.ToString()
             populateField(jumlah, Constanta.latte)
         End If
@@ -15,21 +15,21 @@
 
     Private Sub Bom2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If ComboBox1.SelectedValue = "Americano" Then
-            TextBox1.Text = repository.getProductCount(Constanta.americano).ToString()
+            TextBox1.Text = repository.getProductCount(americano).ToString()
         End If
         If ComboBox1.SelectedValue = "Latte" Then
-            TextBox1.Text = repository.getProductCount(Constanta.latte).ToString()
+            TextBox1.Text = repository.getProductCount(latte).ToString()
         End If
     End Sub
 
     Private Sub populateField(jumlah As Int16, jenis As String)
-        If jenis = Constanta.americano Then
-            Label3.Text = jumlah * Constanta.susuAmericano
-            Label4.Text = jumlah * Constanta.kopiAmericano
+        If jenis = americano Then
+            Label3.Text = jumlah * susuAmericano
+            Label4.Text = jumlah * kopiAmericano
         End If
-        If jenis = Constanta.latte Then
-            Label3.Text = jumlah * Constanta.susuLatte
-            Label4.Text = jumlah * Constanta.kopiLatter
+        If jenis = latte Then
+            Label3.Text = jumlah * susuLatte
+            Label4.Text = jumlah * kopiLatter
         End If
     End Sub
 

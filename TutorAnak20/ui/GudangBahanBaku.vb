@@ -2,6 +2,16 @@
     Dim repository As New Repository
     Private Sub GudangBahanBaku_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'load bahan yang dibutuhkan to listview
+        loadData()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        loadData()
+    End Sub
+
+    Private Sub loadData()
+        ListView1.Items.Clear()
+        ListView2.Items.Clear()
         Label5.Text = "0"
         Label6.Text = "0"
         For Each entry In Repository.neededBahan
@@ -26,5 +36,13 @@
         If neededSusu - availableSusu > 0 Then
             Label6.Text = neededSusu - availableSusu
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Purchasing.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Produksi.Show()
     End Sub
 End Class
