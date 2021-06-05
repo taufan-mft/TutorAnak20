@@ -4,12 +4,12 @@
         If ComboBox1.SelectedItem.ToString() = "Americano" Then
             Dim jumlah As Int16 = repository.getProductCount(americano)
             TextBox1.Text = jumlah.ToString
-            populateField(jumlah, Constanta.americano)
+            populateField(jumlah, americano)
         End If
         If ComboBox1.SelectedItem.ToString() = "Latte" Then
             Dim jumlah As Int16 = repository.getProductCount(latte)
             TextBox1.Text = jumlah.ToString()
-            populateField(jumlah, Constanta.latte)
+            populateField(jumlah, latte)
         End If
     End Sub
 

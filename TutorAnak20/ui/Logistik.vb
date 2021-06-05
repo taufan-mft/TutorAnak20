@@ -19,7 +19,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim logistikEntry As New LogistikModel(ComboBox1.SelectedItem.ToString(), ComboBox2.SelectedItem.ToString(), Label9.Text)
+        Dim logistikEntry As New LogistikModel(ComboBox1.SelectedItem.ToString(),
+                                               ComboBox2.SelectedItem.ToString(),
+                                               Label9.Text)
         repository.saveLogistik(logistikEntry)
         'kurangi barang jadi
         Dim americanoDrink As New BarangJadiModel("Americano", -CInt(Label6.Text))
